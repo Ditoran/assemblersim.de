@@ -1,0 +1,387 @@
+<!--
+	Image sources:
+	https://pixabay.com/de/bin%C3%A4r-code-datenschutz-frau-1327493/ (Public Domain)
+	https://pixabay.com/de/platine-leiterplatte-computer-1429542/ (Public Domain)
+	https://pixabay.com/de/chip-schaltung-computer-ic-1294710/ (Public Domain)
+
+	
+	
+	
+					WELCOME TO ASSEMBLERSIM.DE
+
+                                                          .<y).              
+                                                      .<7       Vy.             
+                                                  .o7......         V;.         
+                                              .~yp.................     7y.     
+                                           ~yN            ................  7y. 
+                                       ,yN                       ............(m#
+                                   .yN..........                         ]'  (##
+                               .;Np:....................             N'##E   (##
+                           .~NNpppppppp:p::....................  [a    MNE..p(RE
+                       .g#NNNNNppppppppppppppppp:::...........''(NN-  .MNEppp,  
+                    a##NNNN#####NNNNNNpppppppppppppppppp::QWE   (NNp.ppM"(NNM   
+                ,##NNNNNNNNNNNNNNNN#####NNNNNNppppppppN"  NNE  .(NNWpNN    N    
+            ,##NNNNNNNNNNNNNNNNNNNNNNNNNNN######NNNj#N-   NNEpppC  #NE     N    
+        .m#NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNRR`  jNN-..pNREpNNL   (E     N    
+    .g#NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNR"#NN   jNNWppp   MN     (E     N    
+ q#NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNRN-   #NN..p3M"#NNM    N     (L     '    
+###NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNM". NNb  .#NNppNL  "(N     N     (L          
+#NRNNNNNNNNNNNNNNNNNNNNNNNNNNNNR#NN    NNbppp"  NNE    (N     N     ()          
+##NNNNNNNNNNNNNNNNNNNNNNNNNNE   #NN ..(NNWpNN    @     (N     N                 
+"7#NNNNNNNNNNNNNNNNNNNNNN"NNb   #NNpppL  #NN     NC    (N     7                 
+    NMNNNNNNNNNNNNNNNN    NNb..pNN"NNNM   (N     N     (L                       
+    N   "NNNNNNNNNNNNN   .NNbppN   "#b    (R     A                              
+    N     (L"NNNNNNpNN.ppp" (NN"    #b     N     '                              
+    N           7NNNNNppNN    N     #b     N                                    
+    N                 N#L     N     #      L                                    
+                       #L     N     &                                           
+                       #L     N     '                                           
+                       #b     '                                                 
+                       ()                                                       
+                       ( 
+
+!-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="AssemblerSim ist ein Simulations-Programm für die 8051er-Familie der Microcontroller">
+	<meta name="google-site-verification" content="DCWpGpIp5oqiDHRmaUpWA1sPCU8McM7H8dCMNScTK1I" />
+  <title>AssemblerSim | Assembler Simulator</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+	<!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="alert alert-warning text-center" role="alert">
+			Das Projekt wird nicht mehr weiterentwickelt. Der Code ist auf Github verfügbar.
+		</div>
+	  <div class="container-fluid">	
+		
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+			<img style="max-width:100px; margin-top: -7px;" src="/images/ic.png">
+			</a>
+		  <a class="navbar-brand" href="./">AssemblerSim.de</a>			  
+		</div>
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-main">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="#home" id="page-scroll">Home</a></li>
+			<li><a href="#screenshots" id="page-scroll">Screenshots</a></li>
+			<li><a href="#download" id="page-scroll">Download</a></li>
+			<li><a href="#examples" id="page-scroll">Beispiele</a></li>
+			<li><a href="#docs" id="page-scroll">Doku</a></li>
+			<li><a href="#donation" id="page-scroll">Spende</a></li>
+			<li><a href="#contact" id="page-scroll">Kontakt</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+
+	<div id="home" class="home">
+	  <div class="text-vcenter">
+		<h1>AssemblerSim</h1>
+		<h3>Assembler Simulator</h3>
+		<p>AssemblerSim ist ein Simulations-Programm für die 8051er-Familie der Microcontroller.</p>
+		<a href="#download" class="btn btn-default btn-lg" id="page-scroll">Download</a>
+	  </div>
+	</div>
+	
+	<div id="screenshots" class="pad-section">
+	  <div class="container">
+	  		<h2>Screenshots</h2>
+			<p class="lead"></p>
+			    <div class="row"><div class="col-md-6 col-md-offset-3">
+				<div id="screenshotCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#screenshotCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#screenshotCarousel" data-slide-to="1"></li>
+					<li data-target="#screenshotCarousel" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+					  <img class="first-slide" src="./images/01.png" alt="First slide">
+					</div>
+					<div class="item">
+					  <img class="second-slide" src="./images/02.png" alt="Second slide">
+					</div>
+					<div class="item">
+					  <img class="third-slide" src="./images/03.png" alt="Third slide">	  
+					</div>
+				  </div>
+				  <a class="left carousel-control" href="#screenshotCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#screenshotCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div><!-- /.carousel -->
+				</div></div>
+	  </div>
+	</div>
+	
+	<div id="download" class="pad-section">
+	  <div class="container">
+		<h2 class="text-center">Download</h2> <hr />
+		<div class="row text-center">
+		  <div class="col-sm-6 col-xs-offset-3">
+			AssemblerSim ist ein Simulations-Programm für die 8051er-Familie der Microcontroller.
+			<ul class="fa-ul text-left m-y-1">
+			<li><i class="fa-solid fa-angle-right"></i> Regelbare Geschwindigkeit der Simulation</li>
+			<li><i class="fa-solid fa-angle-right"></i> Alle Register- und Speicherzellen sind sichtbar</li>
+			<li><i class="fa-solid fa-angle-right"></i> Komplett auf Deutsch</li>
+			<li><i class="fa-solid fa-angle-right"></i> Befehlssatz bereits integriert</li>
+			<li><i class="fa-solid fa-angle-right"></i> Automatische Updates</li>
+			<li><i class="fa-solid fa-angle-right"></i> Lauffähig unter Windows, Linux und Mac OS</li>
+			<li><i class="fa-solid fa-angle-right"></i> Beherrscht alle Funktionen, die für das IT-Abitur in Baden-Württemberg relevant sind</li>
+			</ul>
+		  </div>
+		</div>
+		<div class="row spacer-md-4"></div>
+		<div class="row text-center">
+		  <div class="col-sm-6 col-xs-12">
+			<a href="./download.php?id=classic" class="text-default"><i class="glyphicon glyphicon-download-alt"></i></a>
+			<h4>AssemblerSim</h4><h5>(Version 20210408  •  1.09 MB)</h5>
+			<p>Für den Betrieb wird mindestens Java 7 benötigt. Falls noch nicht installiert, können Sie die aktuelle Version <a href="http://www.java.com" target="_blank">hier</a> herunterladen.</p>
+		  </div>
+		  <div class="col-sm-6 col-xs-12">
+			<a href="./download.php?id=portable" class="text-default"><i class="glyphicon glyphicon-download-alt"></i></a>
+			<h4>AssemblerSim Portable</h4><h5>(Version 20210408  •  44.4 MB)</h5>
+			<p>AssemblerSim Portable liefert eine portable Version von Java 7 gleich mit, unterstützt aber nicht alle Features der Classic-Version (z.B. Neustart, Updates, etc.) Eine Installation ist nicht notwendig. Diese Version ist nur unter Windows lauffähig.</p>
+		  </div>
+		</div>
+		<hr />
+		<div class="row text-center">
+		  <div class="col-sm-6 col-xs-12">
+			<p>Empfohlene Systemvoraussetzungen:</p>
+			<ul class="text-left">
+				<li>Dual-Core Prozessor mit min. 2,2 GHz</li>
+				<li>256 MByte RAM</li>
+				<li>Bildschirmauflösung 1024 x 768 oder höher mit mindestens 256 Farben</li>
+				<li>Internetverbindung (optional)</li>
+			</ul>
+		  </div>
+		  <div class="col-sm-6 col-xs-12">
+			<p><a href="./downloads/archiv/" class="btn btn-default" target="_blank">&Auml;ltere Versionen</a>
+			<a href="https://github.com/Ditoran/AssemblerSim" class="btn btn-default" target="_blank">Github Repo</a>
+			<a href="https://assemblersim.de/changelog.txt" class="btn btn-default" target="_blank">Changelog</a></p>
+			<p>Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="examples" class="pad-section">
+	  <div class="container">
+	  			<h2>Beispiele</h2>
+			<p class="lead"></p>
+		<div class="row">
+		  <div class="col-sm-6">
+			<ul class="list-group">
+				<a href="./samples/7-Segment-Anzeige%20Zähler%20mit%20DB.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">7-Seg.-Anzeige Zähler mit DB</li></a>
+				<a href="./samples/BCD.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">BCD</li></a>
+				<a href="./samples/Display eigenes Zeichen.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Display eigenes Zeichen</li></a>
+				<a href="./samples/Fibonacci-Zahlen.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Fibonacci-Zahlen</li></a>
+				<a href="./samples/Interrupt%202.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Interrupt 2</li></a>
+				<a href="./samples/Potentiometer.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Potentiometer</li></a>
+				<a href="./samples/Timer%20Uhr.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Timer Uhr</li></a>
+				<a href="./samples/Zahlenspeicher.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Zahlenspeicher</li></a>
+				<a href="./samples/Samples.zip" target="_blank"><li class="list-group-item">Alle Beispiele als .zip</li></a>
+			</ul>
+		  </div>
+		  <div class="col-sm-6 text-center">
+			<ul class="list-group">
+				<a href="./samples/7-Segment-Anzeige%20Zähler%20rückwärts%20mit%20DB.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">7-Seg.-Anzeige Zähler rückwärts mit DB</li></a>
+				<a href="./samples/Counter%20Display.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Counter Display</li></a>
+				<a href="./samples/Displayansteuerung%201.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Displayansteuerung 1</li></a>
+				<a href="./samples/Drückspiel.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Drückspiel</li></a>
+				<a href="./samples/Interrupt%201.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Interrupt 1</li></a>
+				<a href="./samples/Lauflicht%20mit%20Stop.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Lauflicht mit Stop</li></a>
+				<a href="./samples/Timer%20LED%20Zähler.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Timer LED Zähler</li></a>
+				<a href="./samples/Zahlen%20sortieren.asm" id="sample" class="sample_popup_open" target="_blank"><li class="list-group-item">Zahlen sortieren</li></a>
+			</ul>  
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div id="docs" class="pad-section">
+	  <div class="container">
+	  <h2>Dokumentation</h2>
+		<div class="row">
+		  <div class="col-sm-6">
+
+				<p>Dieser Punkt steht noch im "Wartungsmodus".</p>
+				<p>Ziel ist es, eine umfassende Dokumentation über den Simulator zu entwickeln, die auch Anfängern einen einfachen Einstieg ermöglicht und eventuellen Fehlern bei der Bedienung vorbeugt.</p>
+				<br>
+				<p><a href="./wiki" class="btn btn-default" target="_blank">Zugang zur Doku</a>
+				<a href="./download.php?id=doku" class="btn btn-default">Doku downloaden</a></p>
+
+		  </div>
+		  <div class="col-sm-2 hidden-xs">			
+			<i class="fa-regular fa-circle-question fa-lg" style="font-size: 15em;color: #306d9f;" aria-hidden="true"></i>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="donation" class="pad-section">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm-12 text-center">
+			<h2>Spenden</h2>
+			<p>Hat Dir der AssemblerSim weitergeholfen? Diese Software zu entwickeln und erweitern kostet viel Zeit. Hinzu kommen die Kosten für Domain und Server, um neue Updates ausliefern zu können. Wenn Du dies würdigen möchtest, kannst du über den Spenden-Button einen beliebigen Betrag spenden.</p>
+			<p>Jeder Unterstützer wird im Programm namentlich in den Credits genannt.</p>
+			<div class="progress">
+			  <div class="progress-bar" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
+				71%
+			  </div>
+			</div>
+			<button class="btn btn-default" data-toggle="modal" data-target="#paypalModal"><i class="fa-brands fa-paypal" aria-hidden="true"></i> Paypal</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="contact" class="pad-section">
+	  <div class="container">
+	  
+		<div class="row">
+		<h2>Kontakt</h2>
+		  <div class=" col-sm-offset-2 col-sm-4">
+			<form id="form" action="./../contact.php" action="post">
+			  <div class="form-group">
+				<input type="text" class="form-control" id="name" placeholder="Name" required>
+			  </div>
+			  <div class="form-group">
+				<input type="email" class="form-control" id="email" placeholder="Email" required>
+			  </div>
+			  <div class="form-group">
+				<select class="form-control" id="subject">
+					<option id="field3-1" value="Vorschlag/Kritik zum Programm">Vorschlag/Kritik zum Programm</option>
+					<option id="field3-2" value="Vorschlag/Kritik zur Website">Vorschlag/Kritik zur Website</option>
+					<option id="field3-3" value="Fehler im Programm">Fehler im Programm</option>
+					<option id="field3-4" value="Sonstiges">Sonstiges</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+				<textarea class="form-control" id="message" placeholder="Nachricht" rows="5"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-success">Submit</button>
+			</form>
+		  </div>
+		  <div class=" col-sm-offset-2 col-sm-4">
+			<p>Hier hast du die Möglichkeit, mit dem Programmierer in Kontakt zu treten.</p>
+			<p>Bitte beachte, dass es für das Melden von Fehlern im Programm selbst eine Funktion "Fehler melden" gibt. Mit dieser ist es möglich, den entsprechenden Quellcode, der den Fehler hervorgerufen hat, automatischt mitzusenden.</p>
+			<p>Trotzdem kannst du Fehler auch gerne über das nebenstehende Formular senden.</p>
+			<hr />
+			<p><u>Neu:</u> Melde Fehler über den Bugtracker.<br><br>
+			<a href="./bugtracker/index.php" class="btn btn-primary" target="_blank">Bugtracker öffnen</a></p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+		
+	<div class="modal fade" tabindex="-1" role="dialog" id="paypalModal">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">Spenden mit Paypal</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="row">
+				<div class="col-md-10">
+					<select class="form-control" id="donation-value">
+					  <option value="1">1 &euro;</option>
+					  <option value="2">2 &euro;</option>
+					  <option value="3">3 &euro;</option>
+					  <option value="4">4 &euro;</option>
+					  <option value="5">5 &euro;</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+					<a href="https://www.paypal.me/assemblersim/1" id="donation-submit" type="submit" class="btn btn-success" target="_blank">Submit</a>
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<footer>
+	  <hr />
+	  <div class="container">
+		  <div class="row">
+			<div class="col-md-6">&copy; Dominik Jahnke 2024 | Server v3</div>
+			<div class="col-md-6 text-right"><a href="https://jahnke.im/ueber/#impressum" title="" target="_blank">Impressum</a></div>
+		  </div>
+	  </div>
+	</footer>
+
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+	<script src="fonts/fontawesome/js/all.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookiebar.js"></script>
+	<script type="text/javascript" src="js/js.cookie.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/*$.cookieBar({
+				expireDays: 2,
+				forceShow: false,
+				message: "Diese Website benutzen Cookies. Wenn Sie die Website weiter nutzen, stimmen Sie der Verwendung von Cookies zu.",
+				acceptText: "Zustimmen"
+			});*/
+			
+			$('form').submit(function(e){
+				e.preventDefault();
+				
+				$.post('../contact.php',{ name: $('#name').val(), email: $('#email').val(), subject: $('#subject').val(), message: $('#message').val() }, function(data){
+					$('form').slideUp("fast", function() {
+						
+						$(this).before('<div class="alert alert-success" role="alert"><strong>Danke!</strong> Deine Nachricht wurde abgeschickt!</div>');
+						$('#name').val('');
+						$('#email').val('');
+						$('#subject').val('');
+						$('#message').val('');
+					});
+				});
+				
+			});
+			
+			$('#donation-value').click(function(e){
+				var value = $('#donation-value').val();
+				var link = "https://www.paypal.me/assemblersim/" + value;
+				$('#donation-submit').attr('href', link);
+			});
+		});
+	</script>
+  </body>
+</html>

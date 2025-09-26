@@ -1,0 +1,176 @@
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* additional sections */
+#home {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), /*url(../images/home.jpg) no-repeat center center fixed; */
+  url(../images/pcb.jpg) no-repeat center center fixed;
+  
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+#download .glyphicon-download-alt {
+  border: 2px solid #306d9f;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#download img {
+    width:88px;
+    height: 31px;
+}
+
+#screenshots {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+#examples {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+#examples a{
+  color: #ffffff;
+}
+
+#examples .list-group-item{
+  background-color: #306d9f;
+}
+
+#docs {
+  display: table;
+  position: relative;
+  width: 100%;
+}
+#docs .panel {
+  opacity: 0.85;
+}
+
+#donation {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), url(../images/pcb.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
+#cookie-bar .cb-enable {
+	background: #355664;
+}
+#cookie-bar .cb-enable:hover{
+	background: #355664;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-dialog-large {
+    /* new custom width */
+    width: 850px;
+    display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+div .spacer-md-1 {
+    margin-top: 10px; /* define margin as you see fit */
+}
+
+div .spacer-md-2 {
+    margin-top: 20px; /* define margin as you see fit */
+}
+
+div .spacer-md-3 {
+    margin-top: 30px; /* define margin as you see fit */
+}
+
+div .spacer-md-4 {
+    margin-top: 40px; /* define margin as you see fit */
+}
+
+div .line {
+	border-top: 1px solid #e5e5e5;
+	width: auto;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.navbar-nav  a {
+	outline : none;	
+}
+
+
+.modal.in .modal-dialog-survey {
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	margin:0px;
+	width: 300px;
+}
