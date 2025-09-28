@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Projektseite von AssemblerSim. AssemblerSim ist ein Simulations-Programm für die 8051er-Familie der Microcontroller.">
+		<meta name="author" content="Dominik Jahnke">
+		<meta name="keywords" content="assemblersim, java, assembler, 8051 simulator, assembler platine simulator, 89c51rc2 simulator, 89c51rd2 simulator">
+        
+		<title></title>
+        
+        <link rel="stylesheet" type="text/css" href="./../../../inc/styles.css" />
+               
+        <!--[if IE]>
+        
+        <style type="text/css">
+        .clear {
+          zoom: 1;
+          display: block;
+        }
+        </style>
+
+        
+        <![endif]-->
+		
+		<script type="text/javascript">
+			top.document.title = 'add | AssemblerSim Dokumentation';
+		</script>
+        
+    </head>
+    
+    <body>
+
+    	<div class="section" id="page"> <!-- Defining the #page section with the section tag -->
+    
+            <div class="header"> <!-- Defining the header section of the page with the appropriate tag -->
+
+                <h1>AssemblerSim</h1>
+                <h3>Die Doku zum Programm</h3>
+            
+            </div>
+            
+            <div class="section" id="articles"> <!-- A new section with the articles -->
+
+				<!-- Funktionen start -->
+
+                <div class="line"></div>  <!-- Dividing line -->
+                
+                <div class="article" id="funktionen"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+                    <h2>add</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        <p>Der add-Befehl addiert eine Zahl zum Akkuinhalt hinzu.</p>
+                    </div>
+					<div class="line"></div>
+                    <p>Eine Konstante wird zum Akkuinhalt addiert.</p>
+                    <div class="codebox">
+						<code>
+							mov A, #10<br />
+							add A, #5<br />
+							;Ergebnis im Akku: 15
+						</code>
+					</div>
+					<div class="line"></div>
+                    <p>Ein Registerinhalt wird zum Akkuinhalt addiert.</p>
+                    <div class="codebox">
+						<code>
+							mov R0, #10<br />
+							add A, R0<br />
+							;Ergebnis im Akku: 15
+						</code>
+					</div>
+					<div class="line"></div>
+                    <p>Der Inhalt einer Speicherstelle im RAM wird zum Akkuinhalt addiert.</p>
+                    <div class="codebox">
+						<code>
+							mov A, #5<br />
+							mov R0, #30h<br />
+							mov @R0, #10<br />
+							add A, @R0<br />
+							;Ergebnis im Akku: 15
+						</code>
+					</div>
+                </div>
+                
+				<!-- Funktionen end -->
+
+            </div>
+
+        <div class="footer">
+
+          <div class="line"></div>
+           
+           <p>Copyright &copy; 2013 - AssemblerSim.de | <a href="http://jahnke.im/impressum/" target="_blank">Impressum</a></p>
+           
+           <a href="#" class="up">Go UP</a>
+           <a href="http://tutorialzine.com/2010/02/free-xhtml-css3-website-template/" class="by" target="_blank">Template by Tutorialzine</a>
+           
+
+        </div>
+            
+		</div>
+		
+    </body>
+</html>

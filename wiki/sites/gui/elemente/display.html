@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Projektseite von AssemblerSim. AssemblerSim ist ein Simulations-Programm f�r die 8051er-Familie der Microcontroller.">
+		<meta name="author" content="Dominik Jahnke">
+		<meta name="keywords" content="assemblersim, java, assembler, 8051 simulator, assembler platine simulator, 89c51rc2 simulator, 89c51rd2 simulator">
+        
+		<title></title>
+        
+        <link rel="stylesheet" type="text/css" href="./../../../inc/styles.css" />
+               
+        <!--[if IE]>
+        
+        <style type="text/css">
+        .clear {
+          zoom: 1;
+          display: block;
+        }
+        </style>
+
+        
+        <![endif]-->
+		
+		<script type="text/javascript">
+			top.document.title = 'Display | AssemblerSim Dokumentation';
+		</script>
+        
+    </head>
+    
+    <body>
+
+    	<div class="section" id="page"> <!-- Defining the #page section with the section tag -->
+    
+            <div class="header"> <!-- Defining the header section of the page with the appropriate tag -->
+
+                <h1>AssemblerSim</h1>
+                <h3>Die Doku zum Programm</h3>
+            
+            </div>
+            
+            <div class="section" id="articles"> <!-- A new section with the articles -->
+
+				<!-- Funktionen start -->
+
+                <div class="line"></div>  <!-- Dividing line -->
+                
+                <div class="article" id="funktionen"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+                    <h2>Display</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        <p>Das Display dient sowohl der Anzeige von Texten, als auch von Zeichen und Zahlen. Es besteht aus zwei Reihen mit jeweils 16 Zeichen.</p>
+						<p>Für die Ansteuerung des Displays wird für die echte Platine eine Hilfsdatei benötigt. Diese ist im Simulator bereits integriert und muss nicht manuell mit eingebunden werden.</p>
+						<p>Die Nummerierung der einzelnen Felder ist wie folgt festgelegt:</p>
+						<table>
+							<tr>
+								<td>Erste Zeile</td>
+								<td>00</td>
+								<td>01</td>
+								<td>02</td>
+								<td>03</td>
+								<td>04</td>
+								<td>05</td>
+								<td>06</td>
+								<td>07</td>
+								<td>08</td>
+								<td>09</td>
+								<td>0A</td>
+								<td>0B</td>
+								<td>0C</td>
+								<td>0D</td>
+								<td>0E</td>
+								<td>0F</td>
+							</tr>
+							<tr>
+								<td>Zweite Zeile</td>
+								<td>40</td>
+								<td>41</td>
+								<td>42</td>
+								<td>43</td>
+								<td>44</td>
+								<td>45</td>
+								<td>46</td>
+								<td>47</td>
+								<td>48</td>
+								<td>49</td>
+								<td>4A</td>
+								<td>4B</td>
+								<td>4C</td>
+								<td>4D</td>
+								<td>4E</td>
+								<td>4F</td>
+							</tr>							
+						</table>
+						<p>Das Display kann manuell per Rechtsklick und "Display löschen" geleert werden.</p>
+						
+						<div class="line"></div>
+						<h4>Anzeigen von Text</h4>
+						<p>Der Text muss in einer Tabelle abgelegt werden und diese mit der Ziffer 0 als letzten  Eintrag abgeschlossen werden.</p>
+						<div class="codebox">
+							<code>						
+								lcall initLCD<br />
+								lcall loeschen<br />
+								<br />
+								mov dptr, #text<br />
+								lcall textzeile1<br />
+								<br />
+								ende:<br />
+								sjmp ende<br />
+								<br />
+								text:<br />
+								DB 'Example Text',0
+							</code>
+						</div>
+						<div class="line"></div>
+						<h4>Anzeigen von Zeichen</h4>
+						<p>Das anzuzeigende Zeichen wird mithilfe dessen ASCII-Codes an das Display übertragen. Die entsprechenden Codes können der Tabelle entnommen werden. Zuerst wird das Zielfeld markiert und anschließend das Zeichen gesetzt. Folgendes Beispiel gibt einen Doppelpunkt an der 4. Stelle der 1. Zeile aus.</p>
+						<div class="codebox">
+							<code>
+								lcall initLCD<br />
+								lcall loeschen<br />
+								<br />
+								mov A, #03h<br />
+								lcall cursorpos<br />
+								mov A, #00111010b<br />
+								lcall charaus<br />
+								<br />
+								ende:<br />
+								sjmp ende
+							</code>
+						</div>
+						<div class="line"></div>
+						<h4>Anzeigen von Ziffern</h4>
+						<p>Das Zeilfeld wird markiert und die Ziffer direkt an das Display gesendet. Folgendes Beispiel gibt die Ziffer 5 an der 2. Stelle der 1. Zeile aus.</p>
+						<div class="codebox">
+							<code>
+								lcall initLCD<br />
+								lcall loeschen<br />
+								<br />
+								mov A, #01h<br />
+								lcall cursorpos<br />
+								mov A, #5<br />
+								lcall zifferaus<br />
+								<br />
+								ende:<br />
+								sjmp ende
+							</code>
+						</div>
+						<div class="line"></div>
+						<h4>Zeichensatz-Tabelle</h4>
+						<p><img src="./../../../img/screenshots/table_lcd.png" alt="" /></p>
+                    </div>
+                </div>
+                
+				<!-- Funktionen end -->
+
+            </div>
+
+        <div class="footer">
+
+          <div class="line"></div>
+           
+           <p>Copyright &copy; 2013 - AssemblerSim.de | <a href="http://jahnke.im/impressum/" target="_blank">Impressum</a></p>
+           
+           <a href="#" class="up">Go UP</a>
+           <a href="http://tutorialzine.com/2010/02/free-xhtml-css3-website-template/" class="by" target="_blank">Template by Tutorialzine</a>
+           
+
+        </div>
+            
+		</div>
+		
+    </body>
+</html>

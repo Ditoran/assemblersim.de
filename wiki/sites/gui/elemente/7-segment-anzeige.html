@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Projektseite von AssemblerSim. AssemblerSim ist ein Simulations-Programm f�r die 8051er-Familie der Microcontroller.">
+		<meta name="author" content="Dominik Jahnke">
+		<meta name="keywords" content="assemblersim, java, assembler, 8051 simulator, assembler platine simulator, 89c51rc2 simulator, 89c51rd2 simulator">
+        
+		<title></title>
+        
+        <link rel="stylesheet" type="text/css" href="./../../../inc/styles.css" />
+               
+        <!--[if IE]>
+        
+        <style type="text/css">
+        .clear {
+          zoom: 1;
+          display: block;
+        }
+        </style>
+
+        
+        <![endif]-->
+		
+		<script type="text/javascript">
+			top.document.title = '7-Segment-Anzeige | AssemblerSim Dokumentation';
+		</script>
+        
+    </head>
+    
+    <body>
+
+    	<div class="section" id="page"> <!-- Defining the #page section with the section tag -->
+    
+            <div class="header"> <!-- Defining the header section of the page with the appropriate tag -->
+
+                <h1>AssemblerSim</h1>
+                <h3>Die Doku zum Programm</h3>
+            
+            </div>
+            
+            <div class="section" id="articles"> <!-- A new section with the articles -->
+
+				<!-- Funktionen start -->
+
+                <div class="line"></div>  <!-- Dividing line -->
+                
+                <div class="article" id="funktionen"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+                    <h2>7-Segment-Anzeige</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        <p>Die 7-Segment-Anzeige eignet sich hervorragend zur Ausgabe dezimaler und hexadezimaler Zahlen, ohne diese erst mühsam vom binären in das gewünschte Zahlensystem umzurechnen.</p>
+						<p>Die Segmente sind folgendermaßen nummeriert:</p>
+						<img src="./../../../img/screenshots/7-segment-anzeige-nummeriert.jpg" alt="" />
+						<p>Für die Ansteuerung wird die Verwendung einer Tabelle empfohlen.</p>
+						<p>Beispiel für eine solche Tabelle, in der die Daten für die Hex-Zahlen 0 bis F gespeichert sind:</p>
+						<div class="codebox">
+							<code>
+								tabelle:<br />
+								DB 01111110b, 00010010b, 10111100b, 10110110b, 11010010b, 11100110b, 11101110b, 00110010b, 11111110b, 11110110b, 11111010b, 11001110b, 01101100b, 10011110b, 11101100b, 11101000b
+							</code>
+						</div>
+						<p><u><strong>Achtung</strong></u>: Der Simulator unterstützt momentan nur einzeilige Tabellen. Alle Werte der Tabelle müssen in einer Zeile stehen, durch Komma getrennt.</p>
+                    </div>
+                </div>
+                
+				<!-- Funktionen end -->
+
+            </div>
+
+        <div class="footer">
+
+          <div class="line"></div>
+           
+           <p>Copyright &copy; 2013 - AssemblerSim.de | <a href="http://jahnke.im/impressum/" target="_blank">Impressum</a></p>
+           
+           <a href="#" class="up">Go UP</a>
+           <a href="http://tutorialzine.com/2010/02/free-xhtml-css3-website-template/" class="by" target="_blank">Template by Tutorialzine</a>
+           
+
+        </div>
+            
+		</div>
+		
+    </body>
+</html>
